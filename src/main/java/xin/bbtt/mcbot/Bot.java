@@ -27,6 +27,7 @@ import org.geysermc.mcprotocollib.network.event.session.SessionAdapter;
 import org.geysermc.mcprotocollib.network.event.session.SessionListener;
 import org.geysermc.mcprotocollib.network.netty.DefaultPacketHandlerExecutor;
 import org.geysermc.mcprotocollib.network.session.ClientNetworkSession;
+import org.geysermc.mcprotocollib.protocol.MinecraftConstants;
 import org.geysermc.mcprotocollib.protocol.MinecraftProtocol;
 import org.jline.reader.EndOfFileException;
 import org.jline.reader.UserInterruptException;
@@ -191,6 +192,13 @@ public class Bot {
         );
 
         session = newSession;
+
+        if (AccountLoader.isYggdrasil()) {
+            newSession.setFlag(
+                    MinecraftConstants.SESSION_SERVICE_KEY,
+                    new xin.bbtt.mcbot.auth.YggdrasilSessionService(AccountLoader.getAuthServer())
+            );
+        }
 
         newSession.addListener(new SessionAdapter() {
             @Override
