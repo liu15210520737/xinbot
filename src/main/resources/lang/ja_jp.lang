@@ -121,6 +121,10 @@ xinbot.command.load_yml.failed=プラグイン %s の commands.yml の読み込�
 xinbot.command.load_yml.not_found=リソース内に commands.yml が見つかりません
 xinbot.command.builtin.load_failed=組み込みコマンドの読み込みに失敗しました
 xinbot.config.file.not_found=設定ファイルが見つかりません: %s
+xinbot.auth.yggdrasil.logging.in=サードパーティ認証サーバー (%s) で認証中...
+xinbot.auth.yggdrasil.refreshing=Yggdrasilセッションの有効期限が切れたため更新しています...
+xinbot.auth.yggdrasil.success=サードパーティ認証サーバーでログインしました。プロフィール: %s
+xinbot.auth.yggdrasil.no_profile=ログインに成功しましたが、このアカウントにはMinecraftプロフィールがありません
 xinbot.auth.no_session=セッションが見つかりません
 
 xinbot.command.status.description=ボットの現在のステータスを表示します

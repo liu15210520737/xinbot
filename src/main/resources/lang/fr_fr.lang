@@ -121,6 +121,10 @@ xinbot.command.load_yml.failed=Échec du chargement du fichier commands.yml pour
 xinbot.command.load_yml.not_found=commands.yml non trouvé dans les ressources
 xinbot.command.builtin.load_failed=Échec du chargement des commandes intégrées
 xinbot.config.file.not_found=Fichier de configuration non trouvé : %s
+xinbot.auth.yggdrasil.logging.in=Authentification auprès du serveur d'auth tiers (%s)...
+xinbot.auth.yggdrasil.refreshing=Session Yggdrasil expirée, actualisation...
+xinbot.auth.yggdrasil.success=Connecté via le serveur d'auth tiers, profil : %s
+xinbot.auth.yggdrasil.no_profile=Connexion réussie, mais ce compte n'a aucun profil Minecraft
 xinbot.auth.no_session=Aucune session trouvée
 
 xinbot.command.status.description=Affiche l'état actuel du bot

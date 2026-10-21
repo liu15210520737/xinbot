@@ -121,6 +121,10 @@ xinbot.command.load_yml.failed=Не удалось загрузить commands.y
 xinbot.command.load_yml.not_found=commands.yml не найден в ресурсах
 xinbot.command.builtin.load_failed=Не удалось загрузить встроенные команды
 xinbot.config.file.not_found=Файл конфигурации не найден: %s
+xinbot.auth.yggdrasil.logging.in=Аутентификация на стороннем сервере авторизации (%s)...
+xinbot.auth.yggdrasil.refreshing=Сессия Yggdrasil истекла, обновление...
+xinbot.auth.yggdrasil.success=Вход через сторонний сервер авторизации, профиль: %s
+xinbot.auth.yggdrasil.no_profile=Вход выполнен, но у этой учётной записи нет профилей Minecraft
 xinbot.auth.no_session=Сессия не найдена
 
 xinbot.command.status.description=Показывает текущий статус бота
