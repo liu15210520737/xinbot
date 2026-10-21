@@ -37,6 +37,10 @@ public class AccountLoader {
     private static StepFullJavaSession.FullJavaSession javaSession;
     @Getter
     private static MinecraftProtocol protocol;
+    @Getter
+    private static boolean yggdrasil;
+    @Getter
+    private static String authServer;
     private static final HttpClient httpClient = MinecraftAuth.createHttpClient();
     private static final Gson gson = new Gson();
     public static BotConfigData.Account init(@NotNull BotConfigData.Account account) throws Exception {
@@ -45,6 +49,15 @@ public class AccountLoader {
             protocol = new MinecraftProtocol(profile, null);
             return account;
         }
+        if (YggdrasilAuthenticator.isConfigured(account)) {
+            yggdrasil = true;
+            authServer = account.getAuthServer();
+            YggdrasilAuthenticator.YggdrasilSession session = YggdrasilAuthenticator.login(account);
+            GameProfile profile = new GameProfile(session.uuid(), session.name());
+            protocol = new MinecraftProtocol(profile, session.accessToken());
+            return account;
+        }
+
         if (account.getFullSession() == null || account.getFullSession().isEmpty()) {
             log.warn(LangManager.get("xinbot.auth.session.not.found"));
             log.info(LangManager.get("xinbot.auth.device.code.start"));
@@ -69,6 +82,13 @@ public class AccountLoader {
 
     @SuppressWarnings("unused")
     public static BotConfigData.Account refresh() throws Exception {
+        if (yggdrasil) {
+            BotConfigData.Account account = xin.bbtt.mcbot.Bot.INSTANCE.getConfig().getConfigData().getAccount();
+            YggdrasilAuthenticator.YggdrasilSession session = YggdrasilAuthenticator.refresh(account);
+            GameProfile profile = new GameProfile(session.uuid(), session.name());
+            protocol = new MinecraftProtocol(profile, session.accessToken());
+            return account;
+        }
         if (javaSession == null) {
             throw new Exception(xin.bbtt.mcbot.LangManager.get("xinbot.auth.no_session"));
         }

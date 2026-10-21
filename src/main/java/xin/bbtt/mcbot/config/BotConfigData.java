@@ -39,6 +39,13 @@ public class  BotConfigData {
         private String name;
         private String password;
         private JsonNode fullSession;
+        /**
+         * Base URL of a third-party Yggdrasil authentication server
+         * (外置登录, e.g. "https://littleskin.cn/api/yggdrasil").
+         * Only used when onlineMode is true. Empty or null means
+         * the official Microsoft account login.
+         */
+        private String authServer;
     }
 
     @Data
