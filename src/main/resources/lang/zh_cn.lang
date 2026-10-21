@@ -169,6 +169,10 @@ xinbot.command.load_yml.failed=加载插件 %s 的 commands.yml 失败
 xinbot.command.load_yml.not_found=资源中未找到 commands.yml
 xinbot.command.builtin.load_failed=加载内置命令失败
 xinbot.config.file.not_found=未找到配置文件：%s
+xinbot.auth.yggdrasil.logging.in=正在通过外置登录服务器 (%s) 认证...
+xinbot.auth.yggdrasil.refreshing=外置登录的会话已过期，正在刷新...
+xinbot.auth.yggdrasil.success=外置登录成功，角色: %s
+xinbot.auth.yggdrasil.no_profile=外置登录成功，但该账号下没有任何 Minecraft 角色
 xinbot.auth.no_session=未找到会话
 
 xinbot.command.status.description=显示机器人的当前运行状态

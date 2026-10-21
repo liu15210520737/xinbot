@@ -115,6 +115,10 @@ xinbot.command.load_yml.failed=載入外掛程式 %s 的 commands.yml 失敗
 xinbot.command.load_yml.not_found=資源中未找到 commands.yml
 xinbot.command.builtin.load_failed=載入內建指令失敗
 xinbot.config.file.not_found=未找到設定檔案：%s
+xinbot.auth.yggdrasil.logging.in=正在透過外置登入伺服器 (%s) 驗證...
+xinbot.auth.yggdrasil.refreshing=外置登入的工作階段已過期，正在刷新...
+xinbot.auth.yggdrasil.success=外置登入成功，角色: %s
+xinbot.auth.yggdrasil.no_profile=外置登入成功，但此帳號下沒有任何 Minecraft 角色
 xinbot.auth.no_session=未找到工作階段
 
 xinbot.command.status.description=顯示機器人的目前運行狀態
