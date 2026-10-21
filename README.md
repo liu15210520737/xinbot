@@ -43,6 +43,7 @@ You can find the official MetaPlugin implementation for 2b2t.xin here: [xinMetaP
 ## Features
 - Vibrant logs: parse and render messages just like the official client.
 - Secure login: use your legit Minecraft account with confidence.
+- Third-party auth (外置登录): log in through any Yggdrasil-compatible server (e.g. LittleSkin) by setting `authServer` in `config.conf`.
 - MetaPlugin Architecture: core interaction logic is decoupled, enabling support for various server types via MetaPlugins.
 - Plugin architecture: extend behavior with a familiar Bukkit-style event system.
 - Internationalization: support for multiple languages and bootstrap error reporting.
