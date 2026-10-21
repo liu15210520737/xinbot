@@ -170,6 +170,10 @@ xinbot.command.load_yml.failed=Failed to load commands.yml for plugin %s
 xinbot.command.load_yml.not_found=commands.yml not found in resources
 xinbot.command.builtin.load_failed=Failed to load built-in commands
 xinbot.config.file.not_found=Config file not found: %s
+xinbot.auth.yggdrasil.logging.in=Authenticating against third-party auth server (%s)...
+xinbot.auth.yggdrasil.refreshing=Yggdrasil session expired, refreshing...
+xinbot.auth.yggdrasil.success=Logged in via third-party auth server, profile: %s
+xinbot.auth.yggdrasil.no_profile=Login succeeded, but this account has no Minecraft profiles
 xinbot.auth.no_session=No session found
 
 xinbot.command.status.description=Shows the current status of the bot
